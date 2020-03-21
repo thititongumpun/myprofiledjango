@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page-section about-heading">
+    <div class="container">     
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 mx-auto">
+            {% for ex in context2 %}
+            <div class="bg-faded rounded p-5">
+              
+              <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+              <p>{{ex.name}}</p>
+              </h2>
+              <p class="mb-3">{{ex.work1}}</p>
+              <p class="mb-3">{{ex.work2}}</p>
+              <p class="mb-3">{{ex.work3}}</p>
+              <p class="mb-3">{{ex.work4}}</p>
+              <p class="mb-3">{{ex.work5}}</p>
+              <p class="mb-3">Strength: {{value|linebreaks}} {{ex.sskill}}</p>
+              </div>              
+            </div>
+            {% endfor %}
+
+
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+            
+
+  
+{% endblock content %}

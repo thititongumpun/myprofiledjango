@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page-section about-heading">
+    <div class="container">     
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 mx-auto">
+            {% for exp in context %}
+            <div class="bg-faded rounded p-5">
+              
+              <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+              <p>Name:   {{exp.name}}</p>
+              </h2>
+              <p class="mb-3">Age: {{exp.age}}</p>
+              <p class="mb-3">Address:  {{exp.address}}</p>
+              <p class="mb-3">Day of Birth: {{exp.dob}}</p>
+              <p class="mb-3">Mobile: {{exp.mobile}}</p>
+              <p class="mb-3">E-Mail: {{exp.email}}</p>
+              <p class="mb-0">Education: {{exp.education}}</p>
+              <p class="mb-3">{{exp.exp}}</p>
+              <p class="mb-3">Ability: {{value|linebreaks}}{{exp.ability}}</p>
+              <p class="mb-3">Language: {{exp.lang}}</p>
+              <p class="mb-3">Interest: {{exp.interest}}</p>
+
+              <p class="mb-3">Responsibility: {{value|linebreaks}}{{exp.resp}} </p>
+
+              </div>              
+            </div>
+            {% endfor %}
+
+            <section class="page-section cta">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">                     
+                      <p class="mb-0">This profile make by python django framework</p>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ {% endblock content %}
